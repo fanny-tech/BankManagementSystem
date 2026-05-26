@@ -1,27 +1,21 @@
 package heathcare;
 
-class Doctor extends Person {
+public class Doctor extends Person {
     private String specialization;
 
-    public Doctor( String name, int age, String email,String location) {
-        super( name,age,email,location);
+    public Doctor(String name, int age, String email, String specialization) {
+        super(name, age, email, "");
         this.specialization = specialization;
     }
 
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
-    }
+    public String getSpecialization() { return specialization; }
 
     @Override
     public void displayInfo() {
-
-        System.out.println("Name: " + name);
+        System.out.println("Doctor Name: " + name);
         System.out.println("Age: " + age);
-        System.out.println("EMAIL:"+ email);
-        System.out.println("LOCATION:"+ location);
+        System.out.println("Email: " + email);
+        System.out.println("Specialization: " + specialization);
+        System.out.println("---------------------------");
     }
 }
